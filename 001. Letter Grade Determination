@@ -1,0 +1,51 @@
+package test;
+import java.util.Scanner;
+
+public class Letter_Grade_Determination {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Please enter a grade between 0 and 100 : ");
+		int grade = scanner.nextInt();
+		
+		System.out.println("your grade is : " + grade);
+		
+		if(0 <= grade && grade <=100) {
+			
+			if(grade >= 90) {
+				
+				System.out.print("Your Letter Grade : A");
+				
+			}
+			else if(grade >= 80) {
+				
+				System.out.print("Your Letter Grade : B");
+				
+			}
+			else if(grade >= 70) {
+				
+				System.out.print("Your Letter Grade : C");
+				
+			}
+			else if(grade >= 60) {
+				
+				System.out.print("Your Letter Grade : D");
+				
+			}
+			else {
+				
+				System.out.print("Your Letter Grade : F !");
+				
+			}
+		}
+		else {
+			
+			System.out.print("Invalid grade entered !!!");
+			
+		}
+		
+	}
+
+}
