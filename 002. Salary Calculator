@@ -1,0 +1,52 @@
+package test;
+
+import java.util.Scanner;
+
+public class Salary_Calculator {
+
+	public static void main(String[] args) {
+		
+Scanner scanner = new Scanner(System.in); 
+		
+		System.out.print("Please enter your bird year : ");
+		int byear = scanner.nextInt();
+		
+		System.out.print("Please enter your salary : ");
+		int salary = scanner.nextInt();
+		
+	
+		int age = 2025 - byear;
+		
+
+		
+		if(age < 18) {
+			
+			System.out.print("Yourr age: \n" + age);
+			System.out.print("\nTax rate : %0\n" );			
+			System.out.print("Your salary :  "+ salary*0.9 );
+		}
+		else if(age <= 30 ){
+			
+			System.out.print("Yourr age: " + age);
+			System.out.print("\nTax rate : %10\n" );
+			System.out.print("Your salary : "+ salary * 0.9);
+			
+		}
+		else if(age <= 50 ){
+			
+			System.out.print("Yourr age: " + age);
+			System.out.print("\nTax rate : %20\n" );
+			System.out.print("Your salary : "+ (salary * 0.8));
+			
+		}
+		else {
+			
+			System.out.print("Yourr age: \n" + age);
+			System.out.print("\nTax rate : %30\n" );
+			System.out.print("Your salary : "+ (salary * 0.7));
+			
+		}
+
+	}
+
+}
