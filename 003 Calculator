@@ -1,0 +1,33 @@
+  package test;
+
+import java.util.Scanner;
+
+public class Multiplication_Table {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Please enter a value for num1 : ");
+		int num1 = scan.nextInt();
+		
+		System.out.print("Please enter a value for num2 : ");
+		int num2 = scan.nextInt();
+		
+		int i, j;
+		
+		for(i = 1; i <= num1 ; i++) {
+			
+			for(j = 1; j <= num2; j++) {
+				
+				System.out.print( i*j + "\t");
+				
+			}
+			
+			System.out.print("\n");
+			
+		}
+				
+	}
+
+}
