@@ -1,0 +1,36 @@
+package test;
+
+import java.util.Scanner;
+
+public class array_kayıt {
+
+	public static void main(String[] args) {
+		
+		int i;
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Please enter array length : ");
+		int arrlen = scan.nextInt();
+		
+		String[] arr = new String[arrlen];
+		scan.nextLine();
+		for(i = 0; i < arrlen; i++) {
+			
+			System.out.print("Please enter an input for arr["+i+"] : ");
+			arr[i] = scan.nextLine();
+			
+		}
+		
+		for(i = 0; i < arrlen ; i++) {
+			
+			System.out.print("Array["+i+"] --> " +arr[i]);
+			System.out.print("\n");
+			
+			
+		}
+		
+		
+
+	}
+
+}
