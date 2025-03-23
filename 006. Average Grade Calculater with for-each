@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class for_each_example{
+
+        public static void main(String[] args){
+
+            Scanner scan = new Scanner(System.in);
+
+            
+            int i, x, sum = 0;
+            System.out.print("How many notes will you enter? : ");
+            x = scan.nextInt();
+            int[] grades = new int[x]; 
+
+            for(i = 0; i < x; i++){
+                
+                System.out.print("Please enter your " +(i+1)+" grade : ");
+                grades[i] = scan.nextInt();
+                
+
+            }
+
+            for(int j : grades){
+
+                sum = sum + j;
+
+            }
+            
+            System.out.print("Your average grade : "+(sum/i));
+
+        }
+    
+}
