@@ -1,0 +1,143 @@
+import java.util.Scanner;
+
+class Car{
+
+    private String model;
+    private String year;
+    private double price;
+
+    // CONSTRUCTOR OLUŞTURDUM
+    public Car(String model, String year, double price) {
+        
+        this.model = model;
+        this.year = year;
+        if (price > 0) {
+            this.price = price;
+        } 
+        else {
+            System.out.println("Invalid price! Setting default value: 0.0");
+            this.price = 0.0;
+        }
+
+    }
+
+    // GET VE SET METHODLARIMI OLUŞTURUYORUM
+    public void setModel(String model){
+
+        this.model = model;
+
+    }
+    public String getModel(){
+
+
+        return this.model;
+    } 
+
+
+
+    public void setYear(String year){
+
+        this.year = year;
+
+    }
+    public String getYear(){
+
+
+        return this.year;
+    }
+
+
+
+    public void setPrice(double price){
+
+        if(price > 0){
+
+            this.price = price; 
+
+        }
+        else{
+
+            System.out.println("Please enter a value bigger than 0 !!");
+
+        }
+
+        
+
+    }
+    public double getPrice(){
+
+        return price;
+        
+    }
+
+
+
+    //METHOD FOR DISCOUNT 
+    public void newPrice(double percent){
+
+        price = price * (percent/100);
+
+    }
+
+
+
+
+}
+
+
+
+
+
+public class SecondLab {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Please enter the car1 model : ");
+        String car1_model = scan.nextLine();
+
+        System.out.print("Please enter the car1 year : ");
+        String car1_year = scan.nextLine();
+
+        System.out.print("Please enter the car1 price : ");
+        double car1_price = scan.nextDouble();
+        scan.nextLine();
+
+
+        System.out.print("Please enter the car2 model : ");
+        String car2_model = scan.nextLine();
+
+        System.out.print("Please enter the car2 year : ");
+        String car2_year = scan.nextLine();
+
+        System.out.print("Please enter the car2 price : ");
+        double car2_price = scan.nextDouble();
+        scan.nextLine();
+
+
+        //ALDIGIM DEGERLERI GODNERIYORUM
+        Car car1 = new Car(car1_model, car1_year, car1_price);
+        Car car2 = new Car(car2_model, car2_year, car2_price);
+
+
+        //ALDIGIM DEGERLERI EKRANA BASTIRIYORUM
+        // Display initial prices
+        System.out.printf("\nFirst Price - Car 1 (%s): $%.2f\n", car1.getModel(), car1.getPrice());
+        System.out.printf("Fırst Price - Car 2 (%s): $%.2f\n", car2.getModel(), car2.getPrice());
+
+
+        // Applying discounts
+        car1.newPrice(5); // 5% discount on first car
+        car2.newPrice(7); // 7% discount on second car
+
+        
+        // Display discounted prices
+        System.out.printf("\nNew Price - Car 1 (%s): $%.2f\n", car1.getModel(), car1.getPrice());
+        System.out.printf("New Price - Car 2 (%s): $%.2f\n", car2.getModel(), car2.getPrice());
+
+
+
+        scan.close();
+
+    }
+    
+}
