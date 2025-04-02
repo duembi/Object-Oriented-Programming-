@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class FuelCalculator {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter how much your vehicle spends per kilometer : ");
+        double spend = scan.nextDouble();
+
+        System.out.print("Enter how many kilometers you traveled : ");
+        double km = scan.nextDouble();
+        double price = km*spend;
+        System.out.print("You need to spend "+(price)+"$ for your travel !");
+
+    }
+
+}
