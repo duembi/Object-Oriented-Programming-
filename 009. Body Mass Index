@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class BodyMassIndex {
+    
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Please enter your weight : ");
+        double weight = scan.nextDouble();
+
+        System.out.print("Please enter your lenght : ");
+        double len = scan.nextDouble();
+
+        double BMI = weight / (len * len);
+
+        System.out.print("Your body mass index : " + BMI);
+
+
+
+
+    }
+
+
+}
