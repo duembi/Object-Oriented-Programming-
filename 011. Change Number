@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class ChangeNumber {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("PLease enter a value for num1 : ");
+        int num1 = scan.nextInt();
+
+        System.out.print("Please enter a valur for num2 : ");
+        int num2 = scan.nextInt();
+
+        System.out.print("\nFirst situation :\nnum1 : " + num1 +" num2 : " + num2);
+
+        int var = num1;
+        num1 = num2;
+        num2 = var;
+        
+        System.out.println("\n\nSecond situation :\nnum1 : "+num1+" num2 : "+num2);
+        
+
+
+    }
+
+}
