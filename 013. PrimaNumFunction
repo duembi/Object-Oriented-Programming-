@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class PrimeNumberFucntion {
+
+    public static int PrimeNum(int j){
+
+        for(int i = 2; i < j; i++){
+
+            if(j % i == 0){
+
+                return 0;
+            }
+        
+           
+        }
+
+        return 1;
+        
+    }
+
+
+
+    public static void main(String[] args){
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print(2);
+        System.out.print("\n");
+        for(int i = 3; i < 100; i++){
+            
+            if(PrimeNum(i) == 1){
+
+                System.out.print(i);
+                System.out.print("\n"); 
+            }
+            
+        }
+
+
+    }
+
+
+}
